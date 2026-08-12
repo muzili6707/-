@@ -1,0 +1,33 @@
+{
+  "name": "yanli-vue-restaurant",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
+    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite build",
+    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite preview",
+    "test": "npm run build",
+    "lint": "eslint src worker vite.config.ts --ignore-pattern dist",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.2",
+    "vue": "3.5.18"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@vitejs/plugin-vue": "6.0.8",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module"
+}

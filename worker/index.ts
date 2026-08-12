@@ -1,0 +1,1 @@
+export default { async fetch(request: Request, env: { ASSETS: Fetcher }): Promise<Response> { const response=await env.ASSETS.fetch(request); return response.status!==404 || new URL(request.url).pathname.includes(".") ? response : env.ASSETS.fetch(new Request(new URL("/index.html",request.url))); } };
